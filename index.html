@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>テキストカウンター</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=M+PLUS+1p"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- 文字数カウントアプリ -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="font desc">テキストカウンター</h1>
+          <p>リアルタイムで文字数がカウントされます</p>
+          <div class="wrap-area">
+            <p>
+              <textarea
+                class="form-control"
+                id="textarea"
+                rows="10"
+                cols="50"
+                placeholder="ここにテキストを入力してください"
+              ></textarea>
+            </p>
+            <p class="font bigger">現在：<span id="count1"></span>文字</p>
+          </div>
+        </div>
+      </div>
+      <!-- 文字数カウントダウンテキストボックス -->
+      <div class="form-group">
+        <label class="font">文字数カウントダウン　文字数を設定してね。</label>
+        <p>
+          <span id="count"><input type="text" id="word" /></span>文字
+        </p>
+        <button id="btn" class="btn btn-info" type="button">
+          文字数を設定
+        </button>
+
+        <textarea
+          class="form-control"
+          rows="5"
+          onkeyup="count_down(this);"
+        ></textarea>
+        <span id="count2" class="float-right"></span>
+        <span id="limit" class="font"></span>文字
+        
+      </div>
+    </div>
+
+    <script src="./build/app.js"></script>
+  </body>
+</html>
