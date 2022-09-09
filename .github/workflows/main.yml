@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  hoge:
+    hoge:
       runs-on:ubuntu-latest
       steps:
         - name:Hoge step
